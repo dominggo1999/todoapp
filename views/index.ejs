@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Anjing</title>
+	<link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+	<header>
+		<a href="#">Just Todo</a>
+	</header>
+	<section>
+		<div class="wrapper">
+			<h2>Enter todo item</h2>
+			<p class="msg">(double click todo to delete)</p>
+			<form action="/newtodo" method="POST">
+				<input type="text" placeholder="add todo" name="item">
+				<button type="submit">Submit</button>
+			</form>
+				
+			<ul class="todo-list">
+
+				<%for (let i = 0 ; i < todoList.length; i++) { %>
+					<li id=<%=todoList[i].id %>  > <%= todoList[i].todo  %> </li>
+				<% } %>
+
+			</ul>
+
+		</div>
+	</section>
+
+	<script src="/js/deleteTodo.js"></script>
+</body>
+</html>
+
+
