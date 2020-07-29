@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 3000;
 // const { v4: uuidv4 } = require('uuid');
 
 // Pilih view engine 
@@ -72,4 +73,4 @@ app.get('*', (req, res) => {
 
 
 // Listen to a port 
-app.listen(3000);
+app.listen(PORT);
